@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourReceptionist Pro - Intelligent Receptionist for Global Business</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="relative">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="bot" class="text-white w-5 h-5"></i>
+                        </div>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full pulse-ring"></div>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">YourReceptionist Pro</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-slate-600 hover:text-indigo-600 transition">Features</a>
+                    <a href="#solutions" class="text-slate-600 hover:text-indigo-600 transition">Solutions</a>
+                    <a href="#global" class="text-slate-600 hover:text-indigo-600 transition">Global</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-indigo-600 transition">Pricing</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block text-slate-600 hover:text-indigo-600 font-medium">Sign In</button>
+                    <button class="bg-indigo-600 text-white px-6 py-2 rounded-full font-medium hover:bg-indigo-700 transition transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Start Free Trial
+                    </button>
+                    <button class="md:hidden" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6 text-slate-700"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#features" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Features</a>
+                <a href="#solutions" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Solutions</a>
+                <a href="#global" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Global</a>
+                <a href="#pricing" class="block px-3 py-2 text-slate-600 hover:bg-slate-50 rounded-md">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50"></div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.15),transparent_50%)]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-semibold mb-6">
+                        <span class="w-2 h-2 bg-indigo-600 rounded-full mr-2 animate-pulse"></span>
+                        Trusted by 500+ Global Businesses
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                        Your <span class="gradient-text">AI Receptionist</span><br>
+                        Never Sleeps
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-lg">
+                        Handle calls, schedule appointments, and serve customers in 40+ languages. 
+                        The intelligent receptionist that scales with your business globally.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button class="bg-indigo-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-indigo-700 transition transform hover:scale-105 shadow-xl hover:shadow-2xl flex items-center justify-center gap-2">
+                            <span>Get Started Free</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        <button class="bg-white text-slate-700 border-2 border-slate-200 px-8 py-4 rounded-full font-semibold text-lg hover:border-indigo-600 hover:text-indigo-600 transition flex items-center justify-center gap-2">
+                            <i data-lucide="play-circle" class="w-5 h-5"></i>
+                            <span>Watch Demo</span>
+                        </button>
+                    </div>
+
+                    <div class="flex items-center gap-4 text-sm text-slate-500">
+                        <div class="flex -space-x-2">
+                            <img src="https://i.pravatar.cc/100?img=1" class="w-8 h-8 rounded-full border-2 border-white" alt="User">
+                            <img src="https://i.pravatar.cc/100?img=2" class="w-8 h-8 rounded-full border-2 border-white" alt="User">
+                            <img src="https://i.pravatar.cc/100?img=3" class="w-8 h-8 rounded-full border-2 border-white" alt="User">
+                        </div>
+                        <p>Joined by 2,000+ businesses this month</p>
+                    </div>
+                </div>
+
+                <div class="relative slide-in delay-200">
+                    <div class="relative z-10 bg-white rounded-3xl shadow-2xl p-6 border border-slate-100">
+                        <div class="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center">
+                                    <i data-lucide="bot" class="text-white w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-slate-900">AI Receptionist</h3>
+                                    <p class="text-xs text-green-500 flex items-center gap-1">
+                                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                                        Online Now
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button class="p-2 hover:bg-slate-100 rounded-full transition">
+                                    <i data-lucide="phone" class="w-5 h-5 text-slate-600"></i>
+                                </button>
+                                <button class="p-2 hover:bg-slate-100 rounded-full transition">
+                                    <i data-lucide="more-vertical" class="w-5 h-5 text-slate-600"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 mb-6 h-64 overflow-y-auto" id="chat-container">
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="bot" class="w-4 h-4 text-indigo-600"></i>
+                                </div>
+                                <div class="bg-slate-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
+                                    <p class="text-sm text-slate-700">Hello! Welcome to TechCorp. How may I assist you today?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-3 justify-end">
+                                <div class="bg-indigo-600 rounded-2xl rounded-tr-none px-4 py-3 max-w-[80%]">
+                                    <p class="text-sm text-white">I need to reschedule my appointment for tomorrow</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="bot" class="w-4 h-4 text-indigo-600"></i>
+                                </div>
+                                <div class="bg-slate-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
+                                    <p class="text-sm text-slate-700">Of course! I can help with that. I see you have an appointment at 2:00 PM. Would you prefer morning or afternoon?</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3 justify-end">
+                                <div class="bg-indigo-600 rounded-2xl rounded-tr-none px-4 py-3 max-w-[80%]">
+                                    <p class="text-sm text-white">Morning please, around 10 AM</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="bot" class="w-4 h-4 text-indigo-600"></i>
+                                </div>
+                                <div class="bg-slate-100 rounded-2xl rounded-tl-none px-4 py-3 max-w-[80%]">
+                                    <p class="text-sm text-slate-700">Perfect! I've rescheduled your appointment to tomorrow at 10:00 AM. You'll receive a confirmation email shortly. Is there anything else I can help with?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 items-center border-t border-slate-100 pt-4">
+                            <input type="text" placeholder="Type your message..." class="flex-1 bg-slate-50 border-0 rounded-full px-4 py-3 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none" readonly>
+                            <button class="p-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 floating z-20">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="check" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Call Handled</p>
+                                <p class="font-semibold text-slate-900">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-4 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 floating z-20" style="animation-delay: 1s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="calendar" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">New Booking</p>
+                                <p class="font-semibold text-slate-900">$150 Revenue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="slide-in">
+                    <p class="text-3xl font-bold text-indigo-600">40+</p>
+                    <p class="text-sm text-slate-600 mt-1">Languages Supported</p>
+                </div>
+                <div class="slide-in delay-100">
+                    <p class="text-3xl font-bold text-indigo-600">24/7</p>
+                    <p class="text-sm text-slate-600 mt-1">Availability</p>
+                </div>
+                <div class="slide-in delay-200">
+                    <p class="text-3xl font-bold text-indigo-600">99.9%</p>
+                    <p class="text-sm text-slate-600 mt-1">Uptime SLA</p>
+                </div>
+                <div class="slide-in delay-300">
+                    <p class="text-3xl font-bold text-indigo-600">60%</p>
+                    <p class="text-sm text-slate-600 mt-1">Cost Reduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Challenges & Solutions -->
+    <section id="solutions" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 slide-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Solving Real Business Challenges</h2>
+                <p class="text-lg text-slate-600">Modern problems require intelligent solutions. Here's how we transform your customer experience.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border border-slate-100 slide-in group">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="phone-missed" class="w-7 h-7 text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Missed Calls = Lost Revenue</h3>
+                    <p class="text-slate-600 mb-4">67% of customers won't call back if their first call goes unanswered.</p>
+                    <div class="border-t border-slate-100 pt-4">
+                        <div class="flex items-center gap-2 text-indigo-600 font-semibold">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>AI answers every call instantly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border border-slate-100 slide-in delay-100 group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="globe" class="w-7 h-7 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Language Barriers</h3>
+                    <p class="text-slate-600 mb-4">Struggling to serve international customers due to language limitations.</p>
+                    <div class="border-t border-slate-100 pt-4">
+                        <div class="flex items-center gap-2 text-indigo-600 font-semibold">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>Fluent in 40+ languages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition border border-slate-100 slide-in delay-200 group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="trending-up" class="w-7 h-7 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Scaling Costs</h3>
+                    <p class="text-slate-600 mb-4">Hiring and training receptionists is expensive and time-consuming.</p>
+                    <div class="border-t border-slate-100 pt-4">
+                        <div class="flex items-center gap-2 text-indigo-600 font-semibold">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span>60% lower operational costs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 slide-in">
+                <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wide">Features</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2 mb-4">Everything You Need to Scale</h2>
+                <p class="text-lg text-slate-600">Enterprise-grade AI receptionist capabilities designed for modern businesses.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="headphones" class="w-6 h-6 text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Smart Call Routing</h3>
+                    <p class="text-slate-600 text-sm">Intelligently routes calls based on intent, urgency, and department availability.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in delay-100">
+                    <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="calendar-check" class="w-6 h-6 text-pink-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Appointment Scheduling</h3>
+                    <p class="text-slate-600 text-sm">Seamlessly books appointments integrated with Google Calendar, Outlook, and CRMs.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in delay-200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="message-square" class="w-6 h-6 text-blue-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Omnichannel Support</h3>
+                    <p class="text-slate-600 text-sm">Handle calls, texts, emails, and chat from a single unified AI interface.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="zap" class="w-6 h-6 text-green-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Instant Response</h3>
+                    <p class="text-slate-600 text-sm">Sub-second response times with natural conversation flow and context awareness.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in delay-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-purple-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Enterprise Security</h3>
+                    <p class="text-slate-600 text-sm">GDPR, HIPAA, and SOC2 compliant with end-to-end encryption for all communications.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition border border-transparent hover:border-slate-200 slide-in delay-200">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6 text-orange-600"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Analytics Dashboard</h3>
+                    <p class="text-slate-600 text-sm">Real-time insights into call volumes, customer sentiment, and conversion rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Section -->
+    <section id="global" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%234f46e5\' fill-opacity=\'0.05\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="slide-in">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Built for Global Business</h2>
+                    <p class="text-slate-300 text-lg mb-8">Expand internationally without hiring local staff. Our AI speaks your customers' language, understands cultural nuances, and operates across time zones.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="languages" class="w-6 h-6 text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">40+ Languages</h3>
+                                <p class="text-slate-400">From English and Spanish to Mandarin and Arabic with native-level fluency.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Timezone Intelligence</h3>
+                                <p class="text-slate-400">Automatically adjusts to local business hours and customer timezones.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="banknote" class="w-6 h-6 text-indigo-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">Multi-Currency Support</h3>
+                                <p class="text-slate-400">Process payments and quotes in local currencies with real-time conversion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative slide-in delay-200">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 mt-8">
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇺🇸</div>
+                                <p class="font-semibold">United States</p>
+                                <p class="text-sm text-slate-400">English, Spanish</p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇯🇵</div>
+                                <p class="font-semibold">Japan</p>
+                                <p class="text-sm text-slate-400">Japanese</p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇧🇷</div>
+                                <p class="font-semibold">Brazil</p>
+                                <p class="text-sm text-slate-400">Portuguese</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇩🇪</div>
+                                <p class="font-semibold">Germany</p>
+                                <p class="text-sm text-slate-400">German</p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇦🇪</div>
+                                <p class="font-semibold">UAE</p>
+                                <p class="text-sm text-slate-400">Arabic, English</p>
+                            </div>
+                            <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                                <div class="text-3xl mb-2">🇮🇳</div>
+                                <p class="font-semibold">India</p>
+                                <p class="text-sm text-slate-400">Hindi, English</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 slide-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-lg text-slate-600">Start free, scale as you grow. No hidden fees, no long-term contracts.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 slide-in">
+                    <h3 class="text-xl font-bold mb-2">Starter</h3>
+                    <p class="text-slate-500 mb-6">Perfect for small businesses</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$49</span>
+                        <span class="text-slate-500">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            500 minutes/month
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            5 languages
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            Basic analytics
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            Email support
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-indigo-600 text-indigo-600 rounded-full font-semibold hover:bg-indigo-50 transition">Get Started</button>
+                </div>
+
+                <div class="bg-indigo-600 rounded-2xl p-8 shadow-xl transform scale-105 relative slide-in delay-100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-pink-500 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Professional</h3>
+                    <p class="text-indigo-200 mb-6">For growing businesses</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold text-white">$149</span>
+                        <span class="text-indigo-200">/month</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <i data-lucide="check" class="w-5 h-5 text-green-300"></i>
+                            2,000 minutes/month
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <i data-lucide="check" class="w-5 h-5 text-green-300"></i>
+                            20 languages
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <i data-lucide="check" class="w-5 h-5 text-green-300"></i>
+                            Advanced analytics
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <i data-lucide="check" class="w-5 h-5 text-green-300"></i>
+                            Priority support
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-white">
+                            <i data-lucide="check" class="w-5 h-5 text-green-300"></i>
+                            CRM integrations
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-white text-indigo-600 rounded-full font-semibold hover:bg-indigo-50 transition">Get Started</button>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-slate-200 slide-in delay-200">
+                    <h3 class="text-xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-slate-500 mb-6">For large organizations</p>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">Custom</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            Unlimited minutes
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            All 40+ languages
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            Custom AI training
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            Dedicated account manager
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500"></i>
+                            SLA guarantee
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 border-2 border-indigo-600 text-indigo-600 rounded-full font-semibold hover:bg-indigo-50 transition">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-12 text-center text-white relative overflow-hidden slide-in">
+                <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' viewBox=\'0 0 100 100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z\' fill=\'%23ffffff\' fill-opacity=\'0.1\'/%3E%3C/svg%3E')] opacity-30"></div>
+                
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 relative z-10">Ready to Transform Your Business?</h2>
+                <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto relative z-10">Join thousands of businesses saving time and money with AI-powered reception. Start your free 14-day trial today.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+                    <button class="bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-50 transition transform hover:scale-105 shadow-xl">
+                        Start Free Trial
+                    </button>
+                    <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">
+                        Schedule Demo
+                    </button>
+                </div>
+                
+                <p class="mt-6 text-sm text-indigo-200 relative z-10">No credit card required • Setup in 5 minutes • Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="bot" class="text-white w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">YourReceptionist Pro</span>
+                    </div>
+                    <p class="text-sm text-slate-400">Intelligent receptionist solutions for the modern business. Available 24/7, worldwide.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">API</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms</a></li>
+                        <li><a href="#" class="hover:text-white transition">Security</a></li>
+                        <li><a href="#" class="hover:text-white transition">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">© 2026 YourReceptionist Pro. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
